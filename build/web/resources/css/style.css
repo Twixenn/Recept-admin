@@ -1,0 +1,204 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 2018-feb-16, 09:36:50
+    Author     : Fia
+*/
+body {
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
+
+.ui-layout-pane {
+    border-radius: 0;
+    border: none;
+    overflow: hidden;
+}
+
+.ui-widget-content {
+    background-color: transparent;
+    color: inherit;
+}
+
+.ui-widget-content.ui-layout-west a {
+    color: white;
+}
+
+.ui-layout-west .ui-widget-content {
+    padding: 0 !important;
+}
+
+.ui-layout-center {
+    width: calc(100vw - 235px);
+    overflow-x: hidden !important;
+    overflow-y: scroll;
+    box-sizing: border-box;
+    background-color: white;
+    height: calc(100vh - 100px) !important;
+}
+
+.ui-layout-center .ui-widget-content {
+    overflow-x: hidden !important;
+}
+
+.ui-layout-west {
+    width: 235px !important;
+    background-color: #4b0368;
+    color: white;
+    padding: 0px !important;
+    height: calc(100vh - 100px) !important;
+}
+
+.ui-layout-north {
+    padding-left: 20px !important;
+    background-color: #AE66B9;
+    color: white;
+    overflow: hidden;
+    height: 100px !important;
+}
+
+.ui-layout-center {
+    background-color: #f2f2f2;
+    padding: 20px !important;
+}
+
+.ui-menu {
+    background: none;
+    background-color: transparent;
+    border: none;
+    padding: 0px !important;
+    float: left;
+}
+
+a.ui-state-hover {
+    background: none !important;
+    background-color: white !important;
+    color: black !important;
+}
+
+.ui-menuitem {
+    margin: 0 !important;
+}
+
+.ui-menu .ui-menuitem-link {
+    padding: 10px 0 10px 14px !important;
+    border: none !important;
+    border-radius: 0 !important;
+    width: 100% !important;
+}
+
+.ui-menuitem-link.active {
+    padding-left: 7px !important;
+    border-left: 7px solid #AE66B9 !important;
+}
+
+th {
+    background: none !important;
+    border: none !important;
+    text-align: left !important;
+}
+
+thead {
+    padding: 15px 15px !important;
+    background-color: white;
+    border: 2px solid #a8a8a8;
+    border-top: 1px solid #a8a8a8;
+}
+
+tbody {
+    background-color: white !important;
+    border: 2px solid #a8a8a8 !important;
+}
+
+.ui-datatable tbody td {
+    padding: 15px 15px !important;
+    border: none !important;
+}
+
+.ui-datatable thead th {
+    padding: 15px 15px !important;
+    border: none !important;
+}
+
+.ui-datatable tbody a {
+    color: #4b0368;
+}
+
+.ui-datatable tbody tr {
+    border: none !important;
+}
+
+table#dash {
+    border-collapse: separate;
+    border-spacing: 20px;
+    width: 100%;
+}
+
+#dash thead, #dash tbody {
+    border: none !important;
+}
+
+#dash thead th {
+    text-align: center !important;
+}
+
+#dash td {
+    background-color: white;
+    height: 200px;
+    width: 33%;
+    padding: 20px;
+}
+
+#dash td img {
+    width: 100px;
+    vertical-align: middle;
+    margin-right: 20px;
+}
+
+form#search {
+    text-align: center;
+}
+
+form#search table {
+    display: inline-block;
+}
+
+form#search td {
+    padding: 0;
+}
+
+form#search td input {
+    box-shadow: none;
+    border: 2px solid #a8a8a8;
+    border-radius: 20px;
+    padding: 7px 20px;
+    font-size: 0.8em;
+    margin-bottom: 30px;
+    background-color: transparent;
+}
+
+form#search table tbody{
+    background: transparent !important;
+    margin: auto;
+}
+
+.text span.smalltext {
+    font-size: 0.8em;
+}
+
+.not-scroll .ui-layout-unit-content {
+    overflow: hidden !important;
+}
+
+.text {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.text span {
+    font-size: 3rem;
+}

@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+
+    <body>
+
+        <ui:composition template="./AdminTemplate.xhtml">
+
+            <ui:define name="content">
+                <h:form>
+                <p:dataTable var="user" value="#{userBean.users}">
+                    <p:column headerText="Id">
+                        <h:outputText value="#{user.id}" id="id"/>
+                    </p:column>
+                    <p:column headerText="Username">
+                        <h:outputText rendered="#{!user.editable}" value="#{user.username}" id="username"/>
+                        <p:inputText rendered="#{user.editable}" value="#{userBean.editUser}" id="editUsername"/>
+                    </p:column>
+        
+                    <p:column headerText="UserId">
+                        <h:outputText value="#{user.userId}" id="userId"/>
+                    </p:column>
+        
+                    <p:column headerText="Image">
+                        <h:outputLink rendered="#{!user.editable}" value="#{user.image}" id="image">#{user.image}</h:outputLink>
+                        <h:inputText rendered="#{user.editable}" binding="#{image}" value="#{userBean.editImage}" id="editImage"/>
+                    </p:column>
+                    
+                    <p:column headerText="Action">
+                            <h:commandButton actionListener="#{userBean.delete(user.id)}" value="Delete"/>
+                            <h:commandButton rendered="#{!user.editable}" actionListener="#{userBean.editMode(user)}" value="Edit"/>
+                            <h:commandButton rendered="#{user.editable}" actionListener="#{userBean.edit(user)}" value="Save"/>
+                       
+                    </p:column>
+                </p:dataTable>
+                </h:form>
+            </ui:define>
+
+        </ui:composition>
+
+    </body>
+</html>
